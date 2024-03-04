@@ -5,6 +5,7 @@ import styles from '../styles/stylesInventory';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import { Dropdown } from 'react-native-element-dropdown';
 const Records = () =>{
+    const navigation = useNavigation();
     const data = [
         { label: 'Item 1', value: '1' },
         { label: 'Item 2', value: '2' },
@@ -24,7 +25,7 @@ const Records = () =>{
                         </TouchableOpacity>
                     </View>
                     <View style={styles.VistaCodigo}>
-                        <TouchableOpacity style={[styles.VistaNewmaterial,{marginRight:50}]}>
+                        <TouchableOpacity style={[styles.VistaNewmaterial,{marginRight:50}]} onPress={() => navigation.navigate('NewMaterialSalida')}>
                             <View style={styles.contenedorTextoSalida}>
                                 <Text style={styles.txtNewMaterial}>Salidas</Text>
                             </View>
@@ -32,7 +33,7 @@ const Records = () =>{
                                 <Image style={styles.image} source={require('../../assets/category.png')} />
                             </View>
                         </TouchableOpacity>
-                        <TouchableOpacity style={[styles.VistaNewmaterial,{backgroundColor:"#0578FF"}]}>
+                        <TouchableOpacity style={[styles.VistaNewmaterial,{backgroundColor:"#0578FF"}]} onPress={() => navigation.navigate('NewMaterialEntrada')}>
                             <View style={styles.contenedorTextoSalida}>
                                 <Text style={[styles.txtNewMaterial,{color:"#FFFFFF"}]}>Entrega</Text>
                             </View>

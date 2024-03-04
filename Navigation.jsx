@@ -12,6 +12,9 @@ import RegisScreen from "./src/views/register";
 import InventoryScreen from "./src/views/inventory";
 import RecordsScreen from "./src/views/records";
 import UniformsScreen from "./src/views/uniforms";
+import MaterialScreen from "./src/views/material";
+import MaterialSalidaScreen from "./src/views/salidaMaterial";
+import MaterialEntradaScreen from "./src/views/entradaMaterial";
 const Stack = createNativeStackNavigator();
 const Tab = createBottomTabNavigator();
 const Navigation = () => {
@@ -30,6 +33,10 @@ const Navigation = () => {
         <Stack.Screen name="Register" component={RegisScreen} options={{headerShown:false}}/>
 
         <Stack.Screen name="Inventario" component={TabNavigator} initialParams={{ screen: "Inventario" }} options={{headerShown:false}}/>
+
+        <Stack.Screen name="NewMaterial" component={MaterialScreen} options={{headerShown:false}}/>
+        <Stack.Screen name="NewMaterialSalida" component={MaterialSalidaScreen} options={{headerShown:false}}/>
+        <Stack.Screen name="NewMaterialEntrada" component={MaterialEntradaScreen} options={{headerShown:false}}/>
         
       </Stack.Navigator>
       

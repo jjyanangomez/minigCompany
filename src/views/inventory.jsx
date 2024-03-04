@@ -5,6 +5,7 @@ import styles from '../styles/stylesInventory';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import { Dropdown } from 'react-native-element-dropdown';
 const Inventory = () => {
+    const navigation = useNavigation();
     const data = [
         { label: 'Item 1', value: '1' },
         { label: 'Item 2', value: '2' },
@@ -34,7 +35,7 @@ const Inventory = () => {
                             <Icon name="search" size={25} color="#282928" />
                         </TouchableOpacity>
                     </View>
-                    <TouchableOpacity style={styles.VistaNewmaterial}>
+                    <TouchableOpacity style={styles.VistaNewmaterial} onPress={() => navigation.navigate('NewMaterial')}>
                         <View style={styles.contenedorTexto}>
                             <Text style={styles.txtNewMaterial}>Nuevo Material</Text>
                         </View>
